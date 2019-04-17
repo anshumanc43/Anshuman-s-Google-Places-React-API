@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Map extends Component{
 	componentDidMount(){
 		this.initMap();
-    // this.initAutocomplete();
 	}
 
     initMap= () => {
@@ -11,14 +10,10 @@ export default class Map extends Component{
         center: {lat: -33.8688, lng: 151.2195},
         zoom: 13
     	});
-    // initAutocomplete= () => {
-
-    // }
         var card = document.getElementById('pac-card');
         var input = document.getElementById('pac-input');
         var types = document.getElementById('type-selector');
         var strictBounds = document.getElementById('strict-bounds-selector');
-
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
         var autocomplete = new google.maps.places.Autocomplete(input);
         // Bind the map's bounds (viewport) property to the autocomplete object,
